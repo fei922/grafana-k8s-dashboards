@@ -1,95 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_PROMETHEUS",
-      "label": "Prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    },
-    {
-      "name": "VAR_COSTCPU",
-      "type": "constant",
-      "label": "CPU",
-      "value": "17.78",
-      "description": ""
-    },
-    {
-      "name": "VAR_COSTPCPU",
-      "type": "constant",
-      "label": "PE CPU",
-      "value": "5.35",
-      "description": ""
-    },
-    {
-      "name": "VAR_COSTRAM",
-      "type": "constant",
-      "label": "RAM",
-      "value": "2.38",
-      "description": ""
-    },
-    {
-      "name": "VAR_COSTPRAM",
-      "type": "constant",
-      "label": "PE RAM",
-      "value": "0.72",
-      "description": ""
-    },
-    {
-      "name": "VAR_COSTSTORAGESTANDARD",
-      "type": "constant",
-      "label": "Storage",
-      "value": "0.044",
-      "description": ""
-    },
-    {
-      "name": "VAR_COSTSTORAGESSD",
-      "type": "constant",
-      "label": "SSD",
-      "value": "0.187",
-      "description": ""
-    },
-    {
-      "name": "VAR_COSTDISCOUNT",
-      "type": "constant",
-      "label": "Disc.",
-      "value": "30",
-      "description": ""
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.2.1"
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "table",
-      "name": "Table",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "text",
-      "name": "Text",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -107,8 +16,8 @@
   "editable": true,
   "gnetId": 6873,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1530978789642,
+  "id": 26,
+  "iteration": 1583505276462,
   "links": [],
   "panels": [
     {
@@ -122,6 +31,7 @@
       "id": 86,
       "links": [],
       "mode": "markdown",
+      "options": {},
       "title": "",
       "transparent": true,
       "type": "text"
@@ -135,7 +45,7 @@
         "rgba(50, 172, 45, 0.97)",
         "#c15c17"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "description": "This gauge shows the current CPU use vs CPU available",
       "editable": true,
@@ -174,6 +84,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -225,7 +136,7 @@
         "rgba(50, 172, 45, 0.97)",
         "#c15c17"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "description": "This panel shows current CPU reservation requests by applications, vs CPU available",
       "editable": true,
@@ -263,6 +174,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -313,7 +225,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "format": "currencyUSD",
       "gauge": {
@@ -346,6 +258,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -398,7 +311,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "format": "currencyUSD",
       "gauge": {
@@ -431,6 +344,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -481,7 +395,7 @@
           "value": "avg"
         }
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "This table shows the comparison of CPU and RAM requests by applications, vs the capacity of the node",
       "fontSize": "100%",
       "gridPos": {
@@ -493,6 +407,7 @@
       "hideTimeOverride": true,
       "id": 90,
       "links": [],
+      "options": {},
       "pageSize": 7,
       "repeatDirection": "v",
       "scroll": true,
@@ -597,7 +512,6 @@
       "timeShift": null,
       "title": "Cluster Node Utilisation by CPU and RAM requests",
       "transform": "table",
-      "transparent": false,
       "type": "table"
     },
     {
@@ -609,7 +523,7 @@
         "rgba(50, 172, 45, 0.97)",
         "#c15c17"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "This gauge shows current RAM use by RAM available",
       "editable": true,
       "error": false,
@@ -647,6 +561,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -678,7 +593,6 @@
       "thresholds": "30,80",
       "timeFrom": "",
       "title": "RAM Utilisation",
-      "transparent": false,
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -699,7 +613,7 @@
         "rgba(50, 172, 45, 0.97)",
         "#c15c17"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "This panel shows current RAM reservation requests by applications, vs RAM available",
       "editable": true,
       "error": false,
@@ -736,6 +650,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -766,7 +681,6 @@
       ],
       "thresholds": "30,80",
       "title": "RAM Requests",
-      "transparent": false,
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -787,7 +701,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "format": "currencyUSD",
       "gauge": {
@@ -820,6 +734,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -872,7 +787,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "format": "currencyUSD",
       "gauge": {
@@ -905,6 +820,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -955,7 +871,7 @@
           "value": "avg"
         }
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "fontSize": "100%",
       "gridPos": {
         "h": 11,
@@ -966,6 +882,7 @@
       "hideTimeOverride": false,
       "id": 73,
       "links": [],
+      "options": {},
       "pageSize": 10,
       "repeat": null,
       "repeatDirection": "v",
@@ -1170,7 +1087,6 @@
       "timeShift": null,
       "title": "Namespace cost and utilisation analysis",
       "transform": "table",
-      "transparent": false,
       "type": "table"
     },
     {
@@ -1180,7 +1096,7 @@
           "value": "avg"
         }
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "fontSize": "100%",
       "gridPos": {
         "h": 11,
@@ -1191,6 +1107,7 @@
       "hideTimeOverride": true,
       "id": 94,
       "links": [],
+      "options": {},
       "pageSize": 10,
       "repeatDirection": "v",
       "scroll": true,
@@ -1297,137 +1214,141 @@
       "timeShift": null,
       "title": "Persistent Volume Claims",
       "transform": "table",
-      "transparent": false,
       "type": "table"
     }
   ],
   "refresh": "10s",
-  "schemaVersion": 16,
+  "schemaVersion": 19,
   "style": "dark",
   "tags": [
-    "cost",
-    "utilisation",
-    "metrics"
+    "cost"
   ],
   "templating": {
     "list": [
       {
         "current": {
-          "value": "${VAR_COSTCPU}",
-          "text": "${VAR_COSTCPU}"
+          "text": "17.78",
+          "value": "17.78"
         },
         "hide": 0,
         "label": "CPU",
         "name": "costcpu",
         "options": [
           {
-            "value": "${VAR_COSTCPU}",
-            "text": "${VAR_COSTCPU}"
+            "text": "17.78",
+            "value": "17.78"
           }
         ],
-        "query": "${VAR_COSTCPU}",
+        "query": "17.78",
+        "skipUrlSync": false,
         "type": "constant"
       },
       {
         "current": {
-          "value": "${VAR_COSTPCPU}",
-          "text": "${VAR_COSTPCPU}"
+          "text": "5.35",
+          "value": "5.35"
         },
         "hide": 0,
         "label": "PE CPU",
         "name": "costpcpu",
         "options": [
           {
-            "value": "${VAR_COSTPCPU}",
-            "text": "${VAR_COSTPCPU}"
+            "text": "5.35",
+            "value": "5.35"
           }
         ],
-        "query": "${VAR_COSTPCPU}",
+        "query": "5.35",
+        "skipUrlSync": false,
         "type": "constant"
       },
       {
         "current": {
-          "value": "${VAR_COSTRAM}",
-          "text": "${VAR_COSTRAM}"
+          "text": "2.38",
+          "value": "2.38"
         },
         "hide": 0,
         "label": "RAM",
         "name": "costram",
         "options": [
           {
-            "value": "${VAR_COSTRAM}",
-            "text": "${VAR_COSTRAM}"
+            "text": "2.38",
+            "value": "2.38"
           }
         ],
-        "query": "${VAR_COSTRAM}",
+        "query": "2.38",
+        "skipUrlSync": false,
         "type": "constant"
       },
       {
         "current": {
-          "value": "${VAR_COSTPRAM}",
-          "text": "${VAR_COSTPRAM}"
+          "text": "0.72",
+          "value": "0.72"
         },
         "hide": 0,
         "label": "PE RAM",
         "name": "costpram",
         "options": [
           {
-            "value": "${VAR_COSTPRAM}",
-            "text": "${VAR_COSTPRAM}"
+            "text": "0.72",
+            "value": "0.72"
           }
         ],
-        "query": "${VAR_COSTPRAM}",
+        "query": "0.72",
+        "skipUrlSync": false,
         "type": "constant"
       },
       {
         "current": {
-          "value": "${VAR_COSTSTORAGESTANDARD}",
-          "text": "${VAR_COSTSTORAGESTANDARD}"
+          "text": "0.044",
+          "value": "0.044"
         },
         "hide": 0,
         "label": "Storage",
         "name": "costStorageStandard",
         "options": [
           {
-            "value": "${VAR_COSTSTORAGESTANDARD}",
-            "text": "${VAR_COSTSTORAGESTANDARD}"
+            "text": "0.044",
+            "value": "0.044"
           }
         ],
-        "query": "${VAR_COSTSTORAGESTANDARD}",
+        "query": "0.044",
+        "skipUrlSync": false,
         "type": "constant"
       },
       {
         "current": {
-          "value": "${VAR_COSTSTORAGESSD}",
-          "text": "${VAR_COSTSTORAGESSD}"
+          "text": "0.187",
+          "value": "0.187"
         },
         "hide": 0,
         "label": "SSD",
         "name": "costStorageSSD",
         "options": [
           {
-            "value": "${VAR_COSTSTORAGESSD}",
-            "text": "${VAR_COSTSTORAGESSD}"
+            "text": "0.187",
+            "value": "0.187"
           }
         ],
-        "query": "${VAR_COSTSTORAGESSD}",
+        "query": "0.187",
+        "skipUrlSync": false,
         "type": "constant"
       },
       {
         "current": {
-          "value": "${VAR_COSTDISCOUNT}",
-          "text": "${VAR_COSTDISCOUNT}"
+          "text": "30",
+          "value": "30"
         },
         "hide": 0,
         "label": "Disc.",
         "name": "costDiscount",
         "options": [
           {
-            "value": "${VAR_COSTDISCOUNT}",
-            "text": "${VAR_COSTDISCOUNT}"
+            "text": "30",
+            "value": "30"
           }
         ],
-        "query": "${VAR_COSTDISCOUNT}",
+        "query": "30",
+        "skipUrlSync": false,
         "type": "constant"
       }
     ]
@@ -1463,7 +1384,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Analysis by Cluster",
+  "title": "Cluster Analysis",
   "uid": "at-cost-analysis",
-  "version": 6
+  "version": 1
 }
