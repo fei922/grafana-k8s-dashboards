@@ -860,8 +860,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "ittaxi",
-          "value": "ittaxi"
+          "text": "",
+          "value": ""
         },
         "datasource": "Prometheus",
         "definition": "",
